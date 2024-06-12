@@ -9,6 +9,7 @@ phase: dev
 
 image:
   repository: harbor.apps.c6.numerique-interieur.com/mi-service-team
+  #repository: quay.apps.ocp4-8.infocepo.com/<NOM_ORGANISATION>-<NOM_PROJET>/<NOM_REPO>
   name: java-demo
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
@@ -35,7 +36,7 @@ resources:
     cpu: "1"
   requests:
     memory: "512Mi"
-    cpu: "500Mi"
+    cpu: 100m
 
 global:
   postgresql:
